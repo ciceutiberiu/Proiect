@@ -1,0 +1,37 @@
+﻿<Page x:Class="Proiect.Imprumut"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:Proiect"
+      mc:Ignorable="d" 
+      d:DesignHeight="615" d:DesignWidth="800"
+      Title="Imprumut">
+
+    <Grid Height="615" Background="SandyBrown" Width="800">
+        
+        <Button Margin="33,12,676,574" Foreground="Black" Content="Inapoi" Command="NavigationCommands.BrowseBack"></Button>
+
+        <Label Content="Lista Imprumuturilor Catre Clienti" FontWeight="Bold" FontSize="15" Foreground="Black" Margin="453,36,81,549"></Label>
+        <DataGrid x:Name="dataGrid" Margin="453,87,43,373"/>
+        <Label Content="Afiseaza Imprumuturile" FontWeight="Bold" FontSize="15" Margin="453,266,163,319" />
+        <CheckBox Margin="697,275,81,319" Checked="imprumuturiChecked" Unchecked="imprumuturiUnchecked" RenderTransformOrigin="0.548,-2.732" />
+
+        <Label Content="Adauga Imprumut" Foreground="Black" FontSize="13" FontWeight="Bold" Margin="48,109,607,472" />
+        <Label Content="CNP client" Margin="48,175,628,410" FontWeight="Bold"/>
+        <TextBox x:Name="cnpClient" Margin="152,175,496,414" />
+        <Label Content="Data retur" Margin="48,247,560,338" FontWeight="Bold" FontSize="13" />
+        <DatePicker x:Name="dataRetur" Margin="152,246,458,329" DisplayDate="2022-01-08" FirstDayOfWeek="Monday" />
+        <Label Content="ID carte" Margin="48,308,560,277" FontWeight="Bold" FontSize="13"/>
+        <TextBox x:Name="idCarte" Margin="152,308,543,281"/>
+
+        <Label Content="Introdu ID-ul imprumutului pentru a Edita" FontSize="12" FontWeight="Bold" Margin="453,320,92,267" />
+        <TextBox x:Name="idToEdit" Margin="720,320,43,267"/>
+
+
+        <Button x:Name="adaugaImprumut" Content="Adauga" Margin="48,385,672,198" Click="adaugaImprumut_Click" />
+        <Button x:Name="editImprumut" Content="Edit" Margin="453,380,267,203" Click="editImprumut_Click" />
+        <Button x:Name="stergeImprumut" Content="Sterge" Margin="668,380,52,203" Click="stergeImprumut_Click" />
+        <Button x:Name="actualizeazaImprumut" Content="Actualizeaza" Margin="565,380,155,203" Click="actualizeazaImprumut_Click" />
+    </Grid>
+</Page>

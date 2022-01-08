@@ -1,0 +1,39 @@
+﻿<Page x:Class="Proiect.pages.Landing"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Proiect.pages"
+      xmlns:n="clr-namespace:Proiect"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Landing">
+
+
+    <Grid ButtonBase.Click="Grid_Click">
+        <Label Content="BIBLIOTECA PROIECT WPF" FontSize="30" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="0,50,0,0" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.832"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Border BorderBrush="Coral" BorderThickness="4" Height="50" Margin="178,200,166,201">
+
+            <WrapPanel Margin="33,0,-19,0">
+                <n:NavButton Margin="10" Text="Carti" Foreground="White" FontSize="15" FontWeight="Bold" NavUri="/pages/CartiPage.xaml"></n:NavButton>
+                <n:NavButton Margin="10" Text="Bibliotecari" Foreground="White" FontSize="15" FontWeight="Bold" NavUri="/pages/Bibliotecari.xaml"></n:NavButton>
+                <n:NavButton Margin="10" Text="Clienti" Foreground="White" FontSize="15" FontWeight="Bold" NavUri="/pages/Clienti.xaml"></n:NavButton>
+                <n:NavButton Margin="10" Text="Imprumuturi" Foreground="White" FontSize="15" FontWeight="Bold" NavUri="/pages/Imprumut.xaml"></n:NavButton>
+                <n:NavButton Margin="10" Text="Autori" Foreground="White" FontSize="15" FontWeight="Bold" NavUri="/pages/autoriPage.xaml"></n:NavButton>
+            </WrapPanel>
+        </Border>
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/landing.jpg"></ImageBrush>
+        </Grid.Background>
+
+    </Grid>
+</Page>
